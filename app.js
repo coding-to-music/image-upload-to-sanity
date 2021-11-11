@@ -14,6 +14,9 @@ var express     = require("express"),
     session = require("express-session"),
     seedDB      = require("./seeds"),
     methodOverride = require("method-override");
+
+// var port = normalizePort(process.env.PORT || '3300');
+var port = '3300';
     
 //requiring routes
 var commentRoutes    = require("./routes/comments"),
@@ -55,6 +58,7 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-app.listen(3000 || process.env.PORT, process.env.IP, function(){
-   console.log("The YelpCamp Server Has Started!");
+app.listen(port || process.env.PORT, process.env.IP, function(){
+    console.log('Listening http://localhost:' + port); 
+    console.log("The YelpCamp Server Has Started!");
 });
