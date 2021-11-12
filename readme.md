@@ -133,3 +133,9 @@ The YelpCamp Server Has Started!
 
 Open up http://localhost:3300/
 
+
+Upload images to Sanity.io
+
+https://www.sanity.io/docs/assets
+
+
